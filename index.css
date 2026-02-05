@@ -1,35 +1,65 @@
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* vh = view height (altura da tela) */
+    margin: 0;
     color: white;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
-ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    align-items: center;
-    padding: 16px;
+
+.headergrandao h1{
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: 1px;   
 }
 
-a {
-    color: white;
-    text-decoration: none;
+.headergrandao p{
+    font-size: 1.1rem;
+    color: #3498db;
+    text-transform: uppercase;
+    font-weight: bold;
 }
+
+.ti-header img{
+    margin-top: 0.1px;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+    max-width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.ti-header img:hover{
+    transform: scale(1.05); /* tentativa de "zoom" na imagem */
+}
+
+header{ 
+    background: #000000; 
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;   
+    transition: transform 0.3s ease;
+}
+
+nav a:hover{
+    transform: scale(1.2); /* pra aumentar o tamanhjo */
+    color: #3498db; 
+}
+
 
 header img{
     width: 300px;
     height: 300px;  
     border-radius: 50%;
     border: 2px solid rgb(60, 83, 112);
+    margin-top: -70px
 }
 
-.center{
-    text-align: center;
-}
-
-h1{
-    color: rgb(60, 83, 112);
-}
 
 footer img{
     width: 80px;
@@ -37,25 +67,74 @@ footer img{
 }
 
 footer{
+    background: #2c3e50;
+    color: white;
+    padding: 5px;
     display: flex;
     justify-content: center;
+    position: fixed; bottom: 0;
 }
 
 footer a{
-    margin: 50px;
-    text-align: center;
+    margin: 10px;
+    text-align: left;
+    margin: auto;
 }
 
 .logo-linkedin{
     width: 30px;
     height: auto;
+    margin-top: 1px;
+}
+
+nav{ 
+    background: #376570;
+    padding: 10px;
+    text-align: center; 
+    position: sticky;
+    top: 0;
+}
+
+
+section{
+    padding: 40px;
+    border-bottom: 1px solid #ddd;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contato-footer {
+    background: black;
+    padding: 25px;
+    text-align: left;
+    font-style: italic;
+    
+}
+
+h2 {
+    color: #2980b9;
+}
+
+.ti-header {
+    font-size: 35px;
+    color: rgb(223, 225, 233); 
+    font-weight: bold; 
+}
+
+.contato-header{
+    width: 30px;
+    height: auto;
     margin-top: 20px;
 }
 
-.container{
-    padding: 0px 50px;
+#github div{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 20px 0; /* Adiciona um espaço em cima e embaixo */
 }
 
-nav a:hover{
-    color: rgb(60, 83, 112);
+#github img[src*="alura-github"] {
+    width: 800px;           
+    height: auto;           
+    border-radius: 8px; /*SERVE PRA ARREDONDAR AS BORDAS*/
 }
